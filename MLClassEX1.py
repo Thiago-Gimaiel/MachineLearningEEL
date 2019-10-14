@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
+# In[1]:
 
 # Importação das bibliotecas necessárias
 get_ipython().run_line_magic('matplotlib', 'inline')
@@ -16,9 +15,7 @@ from sklearn.neighbors import KNeighborsClassifier
 # Neste exemplo irei usar os dados do Cancer de Mama
 dados_cancer = load_breast_cancer()
 
-
-# In[3]:
-
+# In[2]:
 
 def retornaResultadosModeloKNN_Classificacao(random_state, quantidade, dados, respostas):
     #Divisão entre observações de teste e observações de treino
@@ -40,16 +37,13 @@ def retornaResultadosModeloKNN_Classificacao(random_state, quantidade, dados, re
         
     return quantidade_k, res_treino, res_teste
 
-
-# In[4]:
-
+# In[3]:
 
 # Analisando o dataset do dados_cancer
 print(dados_cancer.keys())
 
 
-# In[12]:
-
+# In[4]:
 
 # Print de alguns resultados
 quantidade_k, res_treino, res_teste = retornaResultadosModeloKNN_Classificacao(1, 20, dados_cancer['data'], dados_cancer['target'])
@@ -58,8 +52,7 @@ print("Treino {} : {}".format(i, res_treino[i]))
 print("Teste {} : {}".format(i, res_teste[i]))
 
 
-# In[7]:
-
+# In[5]:
 
 # Plot dos gráficos com os seguintes randoms 1, 5, 20, 550
 dados = dados_cancer['data']
@@ -112,7 +105,6 @@ plt.rcParams["figure.figsize"] = [12,12]
 plt.show()
 
 
-# In[ ]:
 
 
 
